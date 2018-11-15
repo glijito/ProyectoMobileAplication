@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getBaseContext(), "PROBLEMA EN LA OPERACION:  "+error.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "PROBLEMA EN LA OPERACION:  "+error, Toast.LENGTH_LONG).show();
             }
         }){
             @Override

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contactos"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Nombre"/>
+
+    <EditText
+        android:id="@+id/txtTelefono"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Telefono"/>
+
+    <Button
+        android:id="@+id/btnAlta"
+        android:layout_width="match_parent"
+        android:text="Alta usuario"
+        android:textStyle="bold"
+        android:layout_height="60dp"/>
+    <Button
+        android:id="@+id/btnBaja"
+        android:layout_width="match_parent"
+        android:text="Baja usuario"
+        android:textStyle="bold"
+        android:layout_height="60dp" />
+    <Button
+        android:id="@+id/btnModificacion"
+        android:layout_width="match_parent"
+        android:text="Modificacion usuario"
+        android:textStyle="bold"
+        android:layout_height="60dp" />
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:text="Listar contactos"
+        android:textStyle="bold"
+        android:layout_height="60dp" />
+
+</LinearLayout>

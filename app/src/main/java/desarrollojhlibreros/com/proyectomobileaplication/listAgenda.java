@@ -37,12 +37,10 @@ public class listAgenda extends AppCompatActivity {
         findViewById(R.id.listAgenda);
 
         contactos=new ArrayList<>();
-        obtenerContactos("https://monitorescomagenda.000webhostapp.com/conectorPHP/obtenerContactos_agenda.php");
+        obtenerContactos("http://bmhbdofn.lucusvirtual.es/conector/obtenerContactos_agenda.php");
     }
 
-
     private void obtenerContactos(String URL) {
-
         JsonArrayRequest peticionEnvio =new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -55,7 +53,6 @@ public class listAgenda extends AppCompatActivity {
                         Toast.makeText(getApplication(), "ERROR DE LECTURA: " + e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
-
                 initRecyclerViewAgenda(R.id.listAgenda,contactos,R.layout.cardview_list);
             }
         }, new Response.ErrorListener() {
@@ -68,7 +65,6 @@ public class listAgenda extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(peticionEnvio);
     }
-
 
 
     private  void initRecyclerViewAgenda(int reciclerIdentificador, ArrayList<Contacto> contactos, int cardViewID ){

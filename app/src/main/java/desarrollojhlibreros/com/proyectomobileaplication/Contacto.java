@@ -39,4 +39,13 @@ public class Contacto {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    @Override
+    public String toString() {
+        return "Contacto{" +
+                "nombre='" + nombre + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", imagen='" + imagen + '\'' +
+                '}';
+    }
 }

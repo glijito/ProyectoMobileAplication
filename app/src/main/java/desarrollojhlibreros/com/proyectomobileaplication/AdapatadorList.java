@@ -41,6 +41,7 @@ public class AdapatadorList extends RecyclerView.Adapter<AdapatadorList.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         try{
+            Toast.makeText(instancia,"Objeto:"+contactos.get(position), Toast.LENGTH_LONG).show();
             Glide.with(instancia).load(contactos.get(position).getImagen()).into(viewHolder.imagen);
             viewHolder.nombre.setText("Nombre: "+contactos.get(position).getNombre());
             viewHolder.telefono.setText("Telefono: "+contactos.get(position).getTelefono());
